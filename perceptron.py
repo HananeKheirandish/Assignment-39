@@ -49,12 +49,12 @@ for epoch in range(epochs):
     ax1.scatter(X_train, Y_train, c='green')
     ax1.plot(X_train, Y_pred, c='red')
     
-    Errors.append(np.mean(Y_train-Y_pred) ** 2) #MSE
+    Errors.append(np.mean((Y_train-Y_pred) ** 2)) #MSE
     ax2.clear()
     ax2.plot(Errors)
 
     Y_pred = X_test * w + b
-    Errors_test.append(np.mean(Y_test-Y_pred) ** 2) #MSE
+    Errors_test.append(np.mean((Y_test-Y_pred) ** 2)) #MSE
     ax3.clear()
     ax3.plot(Errors_test)
 
